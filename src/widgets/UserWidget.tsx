@@ -27,7 +27,7 @@ const UserWidget = ({ userId, picturePath }: any) => {
   const getUser = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://friendfusion-api-production.up.railway.app/users/${userId}`, {
+      const response = await fetch(`https://friendfusion-api.onrender.com/users/${userId}`, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -15,7 +15,7 @@ const FriendListWidget = ({ userId }: any) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://friendfusion-api-production.up.railway.app/users/${userId}/friends`,
+      `https://friendfusion-api.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

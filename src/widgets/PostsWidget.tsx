@@ -10,7 +10,7 @@ const PostsWidget = ({ userId, isProfile = false }: any) => {
   const token: any = useSelector((state: RootState) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("https://friendfusion-api-production.up.railway.app/posts", {
+    const response = await fetch("https://friendfusion-api.onrender.com/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -20,7 +20,7 @@ const PostsWidget = ({ userId, isProfile = false }: any) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://friendfusion-api-production.up.railway.app/posts/${userId}/posts`,
+      `https://friendfusion-api.onrender.com/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

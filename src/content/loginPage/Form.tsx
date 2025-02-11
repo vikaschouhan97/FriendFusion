@@ -73,7 +73,7 @@ const Form = () => {
       formData.append(value, values[value]);
     }
     formData.append("picturePath", imageUrl);
-    const res = await fetch("https://friendfusion-api-production.up.railway.app/auth/register", {
+    const res = await fetch("https://friendfusion-api.onrender.com/auth/register", {
       method: "POST",
       body: formData,
     });
@@ -86,7 +86,7 @@ const Form = () => {
 
   const login = async (values: any, onSubmitProps: any) => {
     const loggedInResponse = await fetch(
-      "https://friendfusion-api-production.up.railway.app/auth/login",
+      "https://friendfusion-api.onrender.com/auth/login",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

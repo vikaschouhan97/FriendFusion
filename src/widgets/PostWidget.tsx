@@ -52,7 +52,7 @@ const PostWidget = ({
 
   // when user like or remove like from any post
   const patchLike = async () => {
-    const response = await fetch(`https://friendfusion-api-production.up.railway.app/posts/${postId}/like`, {
+    const response = await fetch(`https://friendfusion-api.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const PostWidget = ({
 
   const handleAddComment = async () => {
     if (comment) {
-      const response = await fetch(`https://friendfusion-api-production.up.railway.app/posts/${postId}/comment`, {
+      const response = await fetch(`https://friendfusion-api.onrender.com/posts/${postId}/comment`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,

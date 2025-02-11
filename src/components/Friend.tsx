@@ -25,7 +25,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }: any) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://friendfusion-api-production.up.railway.app/users/${_id}/${friendId}`,
+      `https://friendfusion-api.onrender.com/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

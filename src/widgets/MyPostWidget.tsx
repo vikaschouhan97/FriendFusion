@@ -73,7 +73,7 @@ const MyPostWidget = ({ picturePath }: any) => {
       if (personName) {
         formData.append("taggedFriends", personName);
       }
-      const response = await fetch(`https://friendfusion-api-production.up.railway.app/posts`, {
+      const response = await fetch(`https://friendfusion-api.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
